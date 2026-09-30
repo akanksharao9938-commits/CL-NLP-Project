@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Exam Pattern RAG</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="logo">
+            ExamPattern<span>RAG</span>
+        </div>
+
+        <div class="header-text">
+            AI-Powered Exam Pattern Analysis
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+        <!-- HERO SECTION -->
+
+        <section class="hero">
+
+            <h1>
+                Analyze Exam Patterns with AI
+            </h1>
+
+            <p>
+                Search historical questions, discover recurring concepts,
+                analyze trends and explore future topic forecasts.
+            </p>
+
+        </section>
+
+
+        <!-- SEARCH -->
+
+        <section class="search-card">
+
+            <h2>Ask Your Question</h2>
+
+            <p class="description">
+                Enter a topic or question to analyze historical exam patterns.
+            </p>
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="queryInput"
+                    placeholder="Example: electromagnetic induction"
+                >
+
+                <button id="analyzeBtn">
+                    Analyze
+                </button>
+
+            </div>
+
+            <div id="loading" class="loading hidden">
+                Analyzing historical questions...
+            </div>
+
+            <div id="errorMessage" class="error hidden"></div>
+
+        </section>
+
+
+        <!-- RAG RESULT -->
+
+        <section id="resultSection" class="hidden">
+
+            <div class="section-title">
+                <h2>RAG Analysis</h2>
+            </div>
+
+
+            <!-- SUMMARY CARDS -->
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-title">
+                        Retrieved Questions
+                    </div>
+
+                    <div id="questionCount" class="stat-value">
+                        0
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-title">
+                        Years Found
+                    </div>
+
+                    <div id="yearsFound" class="stat-value">
+                        -
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-title">
+                        Main Topic
+                    </div>
+
+                    <div id="mainTopic" class="stat-value small">
+                        -
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- AI ANSWER -->
+
+            <div class="content-card">
+
+                <h2>
+                    AI Pattern Analysis
+                </h2>
+
+                <div id="ragAnswer" class="answer">
+                </div>
+
+            </div>
+
+
+            <!-- RETRIEVED QUESTIONS -->
+
+            <div class="content-card">
+
+                <h2>
+                    Retrieved Historical Questions
+                </h2>
+
+                <div id="questionsContainer">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FORECAST -->
+
+        <section class="forecast-section">
+
+            <div class="section-title">
+
+                <h2>
+                    2027 Topic Forecast
+                </h2>
+
+                <button id="forecastBtn">
+                    Generate Forecast
+                </button>
+
+            </div>
+
+
+            <div id="forecastLoading" class="loading hidden">
+                Generating forecast...
+            </div>
+
+
+            <div id="forecastContainer">
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            ExamPatternRAG | AI-Based Historical Exam Analysis
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
